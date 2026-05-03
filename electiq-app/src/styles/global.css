@@ -1,0 +1,178 @@
+/* ═══════════════════════════════════════════════════════════════
+   ElectIQ — ECI Election Portal
+   Global Styles — Mastercard Aesthetic
+   ═══════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;800&display=swap');
+@import './tokens.css';
+
+/* ── Reset ── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  background-color: var(--canvas-cream);
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--canvas-cream);
+  color: var(--text-primary);
+  line-height: 1.4;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-weight: 400; /* Substitute for 450 with slight tightening */
+  letter-spacing: -0.005em;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Typography ── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--navy);
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: var(--text-4xl); line-height: 1; }
+h2 { font-size: var(--text-2xl); line-height: 1.2; }
+h3 { font-size: var(--text-xl); line-height: 1.2; }
+
+p {
+  color: var(--ink-black);
+  line-height: 1.4;
+  margin-bottom: var(--space-2);
+}
+
+a {
+  color: var(--link-blue);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity var(--transition-fast);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ── Eyebrow Labels ── */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--slate-gray);
+  margin-bottom: var(--space-2);
+}
+
+.eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--signal-orange);
+}
+
+/* ── Buttons ── */
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--india-green);
+  color: var(--white);
+  border: 1.5px solid var(--india-green);
+  border-radius: var(--radius-btn);
+  padding: 6px 24px;
+  font-size: var(--text-base);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  transition: transform var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  transform: scale(0.98);
+  text-decoration: none;
+}
+
+.btn-primary.large {
+  padding: 12px 32px;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--white);
+  color: var(--ink-black);
+  border: 1.5px solid var(--ink-black);
+  border-radius: var(--radius-btn);
+  padding: 6px 24px;
+  font-size: var(--text-base);
+  font-weight: 500;
+  transition: transform var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  transform: scale(0.98);
+}
+
+.btn-satellite {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-circle);
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-black);
+  box-shadow: var(--shadow-float);
+  transition: transform var(--transition-fast);
+}
+
+.btn-satellite:hover {
+  transform: scale(1.05);
+}
+
+/* ── Utility ── */
+.container {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: var(--text-3xl); }
+  h2 { font-size: var(--text-xl); }
+  .container { padding: 0 var(--space-3); }
+}

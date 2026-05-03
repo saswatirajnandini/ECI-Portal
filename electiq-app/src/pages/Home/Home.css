@@ -1,0 +1,448 @@
+/* Home.css — ECI Branding */
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.zoom-widget {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--white);
+  padding: 10px;
+  border-radius: 50px;
+  box-shadow: var(--shadow-float);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 2000;
+  border: 1px solid var(--gray-200);
+}
+
+.zoom-widget button {
+  background: var(--gray-100);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--navy);
+  transition: background 0.2s;
+}
+
+.zoom-widget button:hover {
+  background: var(--gray-200);
+}
+
+.zoom-value {
+  font-weight: 700;
+  min-width: 45px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--navy);
+}
+
+/* ── Alert Banner ── */
+.alert-banner {
+  background-color: var(--warning);
+  color: var(--ink-black);
+  padding: 12px 0;
+}
+
+.alert-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.alert-icon {
+  flex-shrink: 0;
+}
+
+.alert-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.alert-content strong {
+  font-size: var(--text-sm);
+}
+
+.alert-content span {
+  font-size: var(--text-xs);
+}
+
+.alert-link {
+  font-weight: 700;
+  color: var(--ink-black);
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+/* ── Hero Section ── */
+.hero-section {
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?q=80&w=1200&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(90deg, rgba(0,0,128,0.9) 0%, rgba(0,0,128,0.6) 50%, transparent 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: var(--space-8) var(--space-6);
+  color: var(--white);
+}
+
+.hero-text-block {
+  max-width: 600px;
+}
+
+.emblem-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: var(--space-4);
+}
+
+.national-emblem {
+  height: 64px;
+}
+
+.hero-eci-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  letter-spacing: 0.05em;
+  opacity: 0.9;
+}
+
+.hero-title {
+  color: var(--white);
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-6);
+  line-height: 1.1;
+}
+
+.hero-actions {
+  display: flex;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.hero-btn-alt {
+  background-color: var(--white);
+  color: var(--navy);
+  border-color: var(--white);
+}
+
+.next-election-ticker {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(0,0,0,0.4);
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  backdrop-filter: blur(4px);
+  border-left: 4px solid var(--saffron);
+}
+
+.ticker-label {
+  font-size: var(--text-sm);
+  opacity: 0.8;
+}
+
+.ticker-date {
+  font-weight: 700;
+}
+
+.ticker-divider {
+  opacity: 0.5;
+}
+
+/* ── Stats Dashboard ── */
+.stats-dashboard {
+  background-color: var(--white);
+  padding: var(--space-6) 0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+  margin-top: -30px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  text-align: center;
+}
+
+.stat-card {
+  padding: var(--space-4);
+  border-right: 1px solid var(--gray-200);
+}
+
+.stat-card:last-child {
+  border-right: none;
+}
+
+.stat-value {
+  color: var(--india-green);
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  margin-bottom: var(--space-1);
+}
+
+.stat-label {
+  color: var(--gray-600);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* ── Services Section ── */
+.services-section {
+  padding: var(--space-10) 0;
+  background-color: var(--gray-50);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: var(--space-8);
+  font-size: var(--text-2xl);
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: var(--saffron);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-6);
+}
+
+.service-card {
+  background: var(--white);
+  padding: var(--space-6);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-float);
+  border-top: 4px solid var(--ashoka-blue);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-halo);
+}
+
+.service-icon {
+  color: var(--navy);
+  margin-bottom: var(--space-4);
+}
+
+.service-card h3 {
+  margin-bottom: var(--space-2);
+  font-size: var(--text-lg);
+}
+
+.service-card p {
+  color: var(--gray-600);
+  margin-bottom: var(--space-4);
+  min-height: 48px;
+}
+
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--india-green);
+  font-weight: 700;
+}
+
+/* ── Education Home Section ── */
+.education-home-section {
+  padding: var(--space-12) 0;
+  background-color: var(--white);
+}
+
+.edu-header {
+  text-align: center;
+  margin-bottom: var(--space-10);
+}
+
+.section-subtitle {
+  color: var(--gray-600);
+  font-size: var(--text-lg);
+  margin-top: var(--space-2);
+}
+
+.edu-visual-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+  margin-bottom: var(--space-10);
+}
+
+.edu-visual-card {
+  text-align: center;
+  padding: var(--space-6);
+}
+
+.edu-icon-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-6);
+  color: var(--white);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.edu-icon-circle.saffron { background-color: var(--saffron); }
+.edu-icon-circle.navy { background-color: var(--navy); }
+.edu-icon-circle.green { background-color: var(--india-green); }
+
+.edu-visual-card h3 {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-3);
+  color: var(--navy);
+}
+
+.edu-visual-card p {
+  color: var(--gray-600);
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+.edu-cta-box {
+  background: var(--navy);
+  border-radius: var(--radius-md);
+  padding: var(--space-8);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--white);
+  gap: var(--space-6);
+}
+
+.edu-cta-text h4 {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-2);
+  color: var(--saffron);
+}
+
+.edu-cta-text p {
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .edu-visual-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+  
+  .edu-cta-box {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ── Trust Section ── */
+.trust-section {
+  background-color: var(--navy);
+  padding: var(--space-10) 0;
+  text-align: center;
+  color: var(--white);
+}
+
+.trust-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.trust-content h2 {
+  color: var(--white);
+  margin-bottom: var(--space-4);
+}
+
+.trust-content p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-6);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .hero-overlay {
+    background: linear-gradient(90deg, rgba(0,0,128,0.9) 0%, rgba(0,0,128,0.8) 100%);
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .stat-card:nth-child(2) {
+    border-right: none;
+  }
+  
+  .stat-card:nth-child(1), .stat-card:nth-child(2) {
+    border-bottom: 1px solid var(--gray-200);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-actions {
+    flex-direction: column;
+  }
+  
+  .next-election-ticker {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .ticker-divider {
+    display: none;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-card {
+    border-right: none !important;
+    border-bottom: 1px solid var(--gray-200);
+  }
+  
+  .stat-card:last-child {
+    border-bottom: none;
+  }
+}

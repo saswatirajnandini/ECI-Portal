@@ -1,0 +1,9 @@
+node_modules
+dist
+electiq-app/node_modules
+electiq-app/dist
+server/node_modules
+server/dist
+.git
+.env
+*.log

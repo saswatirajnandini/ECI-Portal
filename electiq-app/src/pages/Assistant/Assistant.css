@@ -1,0 +1,242 @@
+/* Assistant.css — Mastercard Editorial Chat UI */
+
+.assistant-page {
+  padding: var(--space-8) 0;
+  display: flex;
+  justify-content: center;
+}
+
+.assistant-container {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.assistant-header {
+  text-align: center;
+  margin-bottom: var(--space-4);
+}
+
+.assistant-header h1 {
+  margin-bottom: var(--space-2);
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: var(--text-lg);
+  font-weight: 400;
+}
+
+/* ── Chat Interface ── */
+.chat-interface {
+  background: var(--bg-white);
+  border-radius: var(--radius-stadium);
+  box-shadow: var(--shadow-halo);
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  background: var(--lifted-cream);
+}
+
+.chat-welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  justify-content: center;
+  max-width: 500px;
+}
+
+/* ── Bubbles ── */
+.message-row {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-3);
+}
+
+.user-row {
+  justify-content: flex-end;
+}
+
+.ai-row {
+  justify-content: flex-start;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-circle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--white);
+  flex-shrink: 0;
+}
+
+.ai-avatar {
+  background: var(--ink-black);
+}
+
+.user-avatar {
+  background: var(--signal-orange);
+}
+
+.message-bubble {
+  max-width: 70%;
+  padding: var(--space-3) var(--space-4);
+  border-radius: 20px; /* Mastercard pill radius for buttons/bubbles */
+  font-size: var(--text-base);
+  line-height: 1.5;
+  position: relative;
+}
+
+.user-bubble {
+  background: var(--soft-bone);
+  color: var(--ink-black);
+  border-bottom-right-radius: 4px;
+}
+
+.ai-bubble {
+  background: var(--white);
+  color: var(--ink-black);
+  border-bottom-left-radius: 4px;
+  box-shadow: var(--shadow-float);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.ai-bubble p {
+  white-space: pre-wrap;
+  margin: 0;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: var(--slate-gray);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.ai-bubble:hover .copy-btn {
+  opacity: 1;
+}
+
+/* ── Typing ── */
+.typing-dots {
+  display: flex;
+  gap: 4px;
+  padding: 8px 4px;
+}
+
+.typing-dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--slate-gray);
+  animation: typing 1.4s infinite ease-in-out;
+}
+
+.typing-dots span:nth-child(1) { animation-delay: 0s; }
+.typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+.typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typing {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1); }
+}
+
+/* ── Input Area ── */
+.chat-input-area {
+  padding: var(--space-4);
+  background: var(--white);
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.chat-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--lifted-cream);
+  border-radius: var(--radius-pill);
+  padding: 8px 8px 8px 24px;
+  border: 1.5px solid transparent;
+  transition: border-color var(--transition-fast);
+}
+
+.chat-input-wrapper:focus-within {
+  border-color: var(--ink-black);
+}
+
+.chat-input-wrapper input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--ink-black);
+  outline: none;
+}
+
+.chat-input-wrapper input::placeholder {
+  color: var(--slate-gray);
+}
+
+.btn-send {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-circle);
+  background: var(--ink-black);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-fast);
+}
+
+.btn-send:hover:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.btn-send:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.disclaimer {
+  text-align: center;
+  font-size: 12px;
+  color: var(--slate-gray);
+  margin-top: var(--space-2);
+}
+
+@media (max-width: 768px) {
+  .chat-interface {
+    border-radius: var(--radius-btn);
+    height: calc(100vh - 200px);
+  }
+}

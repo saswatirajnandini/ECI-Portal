@@ -1,0 +1,20 @@
+{"level":"info","message":"Server is running on port 3001","timestamp":"2026-05-02T08:10:58.444Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2026-05-02T08:11:06.903Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2026-05-02T08:11:20.033Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2026-05-02T08:11:32.994Z"}
+{"level":"info","message":"Server is running on port 3001 in development mode","timestamp":"2026-05-02T08:11:43.634Z"}
+{"level":"info","message":"Server is running on port 3001 in development mode","timestamp":"2026-05-02T08:18:57.192Z"}
+{"level":"info","message":"GET /api/v1/candidates?page=1&limit=20&search=","timestamp":"2026-05-02T08:19:15.192Z"}
+{"level":"info","message":"GET /api/v1/news?page=1&limit=12","timestamp":"2026-05-02T08:19:17.258Z"}
+{"level":"info","message":"GET /api/v1/news?page=1&limit=12","timestamp":"2026-05-02T08:19:21.261Z"}
+{"level":"info","message":"POST /api/v1/assistant/chat","timestamp":"2026-05-02T08:19:24.631Z"}
+{"level":"info","message":"POST /api/v1/assistant/chat","timestamp":"2026-05-02T14:51:24.365Z"}
+{"level":"info","message":"GET /api/v1/candidates?page=1&limit=20&search=","timestamp":"2026-05-02T14:53:49.204Z"}
+{"level":"info","message":"GET /api/v1/news?page=1&limit=12","timestamp":"2026-05-02T14:53:50.192Z"}
+{"level":"info","message":"GET /api/v1/news?page=1&limit=12","timestamp":"2026-05-02T14:54:10.206Z"}
+{"level":"info","message":"GET /api/v1/news?page=1&limit=12","timestamp":"2026-05-02T15:44:07.316Z"}
+{"level":"info","message":"GET /api/v1/news?page=1&limit=12","timestamp":"2026-05-02T15:44:20.627Z"}
+{"level":"info","message":"GET /api/v1/news?page=1&limit=12","timestamp":"2026-05-02T15:44:29.323Z"}
+{"level":"info","message":"GET /api/v1/news?page=1&limit=12","timestamp":"2026-05-02T16:40:56.219Z"}
+{"level":"info","message":"GET /api/v1/news?page=1&limit=12","timestamp":"2026-05-02T18:17:39.149Z"}
+{"level":"info","message":"GET /api/v1/news?page=1&limit=12","timestamp":"2026-05-02T18:17:46.207Z"}

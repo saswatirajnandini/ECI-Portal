@@ -1,0 +1,231 @@
+/* TopNav.css — ECI Branding */
+
+.eci-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--white);
+  box-shadow: var(--shadow-float);
+}
+
+/* Gov Bar */
+.gov-bar {
+  background-color: var(--saffron);
+  color: var(--white);
+  padding: 4px 0;
+  font-size: var(--text-xs);
+}
+
+.gov-bar-container {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gov-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.gov-text {
+  font-weight: 600;
+}
+
+.gov-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.skip-link {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.accessibility-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--white);
+  font-size: inherit;
+}
+
+.font-sizer {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.font-sizer span {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  position: relative;
+  font-weight: 600;
+}
+
+.language-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--white);
+  color: var(--ink-black);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-float);
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+  padding: 8px 0;
+  z-index: 1010;
+}
+
+.language-dropdown button {
+  padding: 8px 16px;
+  text-align: left;
+  font-size: var(--text-sm);
+}
+
+.language-dropdown button:hover {
+  background: var(--gray-100);
+}
+
+/* Brand Area */
+.brand-area {
+  background: var(--white);
+  padding: 16px 0;
+}
+
+.brand-container {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+}
+
+.eci-logo-img {
+  height: 60px;
+}
+
+.brand-titles h1 {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  margin: 0;
+  color: var(--navy);
+  text-transform: uppercase;
+}
+
+.brand-titles h2 {
+  font-size: var(--text-sm);
+  font-weight: 400;
+  margin: 0;
+  color: var(--gray-600);
+}
+
+.brand-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.helpline {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.helpline-icon {
+  color: var(--navy);
+}
+
+.helpline-label {
+  display: block;
+  font-size: var(--text-xs);
+  color: var(--gray-600);
+}
+
+.helpline-number {
+  font-size: var(--text-lg);
+  color: var(--navy);
+}
+
+
+/* Main Nav */
+.main-nav {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.nav-container {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 20px;
+  color: var(--white);
+  font-weight: 600;
+  font-size: var(--text-base);
+  text-decoration: none;
+  transition: background-color var(--transition-fast);
+}
+
+.nav-link:hover, .nav-link.active {
+  background-color: var(--ashoka-blue);
+  text-decoration: none;
+}
+
+
+.mobile-menu-btn {
+  display: none;
+  color: var(--white);
+}
+
+@media (max-width: 1024px) {
+  .nav-links, .nav-search, .helpline, .brand-titles {
+    display: none;
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+    padding: 12px;
+  }
+  
+  .brand-container {
+    padding: 8px var(--space-3);
+  }
+}

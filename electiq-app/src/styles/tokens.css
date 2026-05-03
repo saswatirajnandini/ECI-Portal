@@ -1,0 +1,92 @@
+/* ═══════════════════════════════════════════════════════════════
+   ElectIQ — ECI Election Portal
+   Design Tokens — Inspired by Mastercard
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Color Palette (ECI Branding) ── */
+  --saffron: #FF9933;
+  --white: #FFFFFF;
+  --india-green: #138808;
+  --navy: #000080;
+  --ashoka-blue: #000080;
+  
+  /* Semantic Colors */
+  --success: #138808;
+  --error: #DC2626;
+  --warning: #F59E0B;
+  --info: #3B82F6;
+  
+  /* Neutrals */
+  --gray-50: #F9FAFB;
+  --gray-100: #F3F4F6;
+  --gray-200: #E5E7EB;
+  --gray-600: #4B5563;
+  --gray-900: #111827;
+  --ink-black: var(--gray-900); /* mapping for legacy vars */
+  --canvas-cream: var(--gray-50);
+  --slate-gray: var(--gray-600);
+  --lifted-cream: var(--white);
+  --signal-orange: var(--saffron);
+  --link-blue: var(--info);
+
+  /* ── Backgrounds & Surfaces ── */
+  --bg-primary: var(--canvas-cream);
+  --bg-white: var(--white);
+  --bg-elevated: var(--lifted-cream);
+  --bg-footer: var(--ink-black);
+  
+  /* ── Text Colors ── */
+  --text-primary: var(--ink-black);
+  --text-secondary: var(--slate-gray);
+  --text-tertiary: var(--granite);
+  --text-white: var(--white);
+  --text-link: var(--link-blue);
+
+  /* ── Typography ── */
+  --font-body: 'Noto Sans', sans-serif;
+  --font-heading: 'Noto Sans', sans-serif;
+
+  /* ── Font Sizes ── */
+  --text-xs: 0.75rem;     /* 12px */
+  --text-sm: 0.875rem;    /* 14px */
+  --text-base: 1rem;      /* 16px */
+  --text-lg: 1.125rem;    /* 18px */
+  --text-xl: 1.5rem;      /* 24px */
+  --text-2xl: 2.25rem;    /* 36px */
+  --text-3xl: 3rem;       /* 48px */
+  --text-4xl: 4rem;       /* 64px */
+
+  /* ── Spacing (8px base) ── */
+  --space-1: 0.5rem;   /* 8px */
+  --space-2: 1rem;     /* 16px */
+  --space-3: 1.5rem;   /* 24px */
+  --space-4: 2rem;     /* 32px */
+  --space-5: 2.5rem;   /* 40px */
+  --space-6: 3rem;     /* 48px */
+  --space-8: 4rem;     /* 64px */
+  --space-10: 6rem;    /* 96px */
+  --space-12: 8rem;    /* 128px */
+
+  /* ── Border Radius ── */
+  --radius-sm: 6px;
+  --radius-btn: 20px;
+  --radius-consent: 24px;
+  --radius-stadium: 40px;
+  --radius-pill: 999px;
+  --radius-circle: 50%;
+
+  /* ── Shadows ── */
+  --shadow-none: none;
+  --shadow-float: rgba(0, 0, 0, 0.04) 0px 4px 24px 0px;
+  --shadow-halo: rgba(0, 0, 0, 0.08) 0px 24px 48px 0px;
+  --shadow-deep: rgba(0, 0, 0, 0.25) 0px 70px 110px 0px;
+
+  /* ── Transitions ── */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+
+  /* ── Layout ── */
+  --content-max-width: 1280px;
+  --nav-height: 80px;
+}
